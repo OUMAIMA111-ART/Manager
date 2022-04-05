@@ -1,0 +1,23 @@
+package casestudy2;
+
+public class ManageException extends Exception{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public ManageException() {
+		// TODO Auto-generated constructor stub
+	}
+	public String toString() {
+		return "Prime incomplète";
+		
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
