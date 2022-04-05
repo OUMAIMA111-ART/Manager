@@ -1,0 +1,63 @@
+package casestudy2;
+
+public class Employee extends Person implements Comparable{
+	public int performance;
+	public int perfbonus;
+	public int objectif;
+	Manager manager;
+
+	public Employee(String lastName, String firstName, float baseSalary, String entreprise, int perfbonus,
+			int performance, int objectif, Manager manager) {
+		super(firstName, lastName, baseSalary, entreprise);
+		this.performance = performance;
+		this.perfbonus = perfbonus;
+		this.objectif = objectif;
+		this.manager = manager;
+	}
+	
+	@Override
+	public double calculsalary() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public boolean isbetterThen(Employee e) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	public int getPerformance() {
+		return performance;
+	}
+
+	public void setPerformance(int performance) {
+		this.performance = performance;
+	}
+
+	public int getPerfbonus() {
+		return perfbonus;
+	}
+
+	public void setPerfbonus(int perfbonus) {
+		this.perfbonus = perfbonus;
+	}
+
+	public int getObjectif() {
+		return objectif;
+	}
+
+	public void setObjectif(int objectif) {
+		this.objectif = objectif;
+	}
+
+	public Manager getManager() {
+		return manager;
+	}
+
+	public void setManager(Manager manager) {
+		this.manager = manager;
+	}
+	
+	
+}
