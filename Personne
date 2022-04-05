@@ -1,0 +1,63 @@
+package casestudy2;
+
+import java.util.ArrayList;
+
+public class Manager extends Person{
+	public int respbonus;
+	ArrayList<Employee> L;
+	
+	public Manager(String firstName, String lastName, float baseSalary, String entreprise, int respbonus,
+			ArrayList<Employee> l) {
+		super(firstName, lastName, baseSalary, entreprise);
+		this.respbonus = respbonus;
+		this.L = l;
+	}
+	public int getRespbonus() {
+		return respbonus;
+	}
+	public void setRespbonus(int respbonus) throws ManageException {
+		if(respbonus<(0.1)*baseSalary) {
+			throw new ManageException();
+		}else {
+			this.respbonus = respbonus;
+		}
+	}
+	public ArrayList<Employee> getL() {
+		return L;
+	}
+	public void setL(ArrayList<Employee> l) {
+		this.L = l;
+	}
+	@Override
+	public double calculsalary() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	public void addEmplyee(Employee e) {
+		this.L.add(e);
+	}
+	public void displayEmployee() {
+		for(int i=0; i<L.size(); i++) {
+			System.out.println(L.get(i).getFirstName());
+		}
+	}
+	public Employee bestEmplyee() {
+		for(int i=0; i<L.size(); i++) {
+			for(int j=i; j<L.size(); j++) {
+				if(L.get(i).getPerformance()>L.get(j).getPerformance()) {
+					System.out.print(L.get(i).getFirstName());
+				}
+			}
+			
+		}
+		return null;
+		
+	}
+	public ArrayList<Employee> worstEmployee() {
+		return null;
+		
+	}
+	
+	
+
+}
