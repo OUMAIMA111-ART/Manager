@@ -1,0 +1,53 @@
+package casestudy2;
+
+import java.util.ArrayList;
+
+public abstract class Person {
+	public String firstName;
+	public String lastName;
+	public float baseSalary;
+	public String entreprise;
+	
+
+	public Person(String firstName, String lastName, float baseSalary, String entreprise) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.baseSalary = baseSalary;
+		this.entreprise = entreprise;
+	}
+	
+	public String getFirstName() {
+		return firstName;
+	}
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+	public String getLastName() {
+		return lastName;
+	}
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+	public float getBaseSalary() {
+		return baseSalary;
+	}
+	public void setBaseSalary(float baseSalary) {
+		this.baseSalary = baseSalary;
+	}
+	public String getEntreprise() {
+		return entreprise;
+	}
+	public void setEntreprise(String entreprise) {
+		this.entreprise = entreprise;
+	}
+	public Person() {
+		// TODO Auto-generated constructor stub
+	}
+	public abstract double calculsalary();
+	
+	public void display() {
+		
+	}
+	
+
+}
