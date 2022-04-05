@@ -1,0 +1,47 @@
+package casestudy2;
+
+import java.util.ArrayList;
+
+public class TestManger {
+	static ArrayList<Person> L1= new ArrayList<Person>();
+
+	public TestManger() {
+		// TODO Auto-generated constructor stub
+	}
+	public void addcol(Person p) {
+		this.L1.add(p);
+	}
+	public float payrol(ArrayList<Person> staff) {
+		float x = 0;
+		for(int i=0; i<staff.size(); i++) {
+			x+=staff.get(i).getBaseSalary();
+		}
+		System.out.print(x);
+		return x;
+	}
+	//
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Manager m1= new Manager("Ahmed", "B", 18000, "Data Truc", 3000, new ArrayList<Employee>());
+		Manager m2= new Manager("Imane","A",  15000, "Data Truc", 5000, new ArrayList<Employee>());
+		//
+		Employee e1= new Employee("A", "Youssef", 11000, "DATA Truc", 3000, 300, 0,m1);
+		Employee e2= new Employee("A", "Mohamed", 10000, "DATA Truc", 3000, 200, 0,m2);
+		Employee e3= new Employee("A", "Mouna", 11000, "DATA Truc", 3000, 100, 0,m1);
+		//
+		m1.addEmplyee(e1);
+		m1.addEmplyee(e3);
+		//
+		TestManger m= new TestManger();
+		m.addcol(e1);
+		m.addcol(e2);
+		m.addcol(e3);
+		m.addcol(m1);
+		m.addcol(m2);
+		
+		m.payrol(L1);
+		
+	}
+	
+
+}
